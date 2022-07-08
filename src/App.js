@@ -1,9 +1,29 @@
 import './App.css';
 
-function App() {
+
+const width = 8;
+const candyColors = [
+  'blue',
+  'green',
+  'orange',
+  'purple',
+  'red',
+  'yellow'
+]
+
+const App = () => {
+
+  const createBoard = () => {
+    const randomColorArrangment = []
+    for (let i = 0; i < width * width; i++) {
+      const randomColor = candyColors[Math.floor(Math.random() * candyColors.length)]
+      randomColorArrangment.push(randomColor)
+    }
+  }
+
+
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div>
     </div>
   );
 }
