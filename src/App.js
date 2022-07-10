@@ -14,7 +14,8 @@ const candyColors = [
 
 const App = () => {
 
-  const [currentColorArrangement, setCurrentColorArrangement] = useState([])
+  const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
+  const [squareBeingDragged, setSquareBeingDragged] = useState(null);
 
   const checkForColumnOfThree = () => {
     for ( let i = 0; i <= 47; i++ ) {
@@ -91,6 +92,7 @@ const App = () => {
   const dragStart = (e) => {
     console.log(e.target)
     console.log('drag start')
+    setSquareBeingDragged(e.target)
   }
 
   const dragDrop = () => {
