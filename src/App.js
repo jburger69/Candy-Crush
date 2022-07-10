@@ -1,15 +1,23 @@
 import './App.css';
 import { useEffect, useState } from 'react'
 
+import blueCandy from './images/blue-candy.png';
+import greenCandy from './images/green-candy.png';
+import orangeCandy from './images/orange-candy.png';
+import purpleCandy from './images/purple-candy.png';
+import redCandy from './images/red-candy.png';
+import yellowCandy from './images/yellow-candy.png';
+import blank from './images/blank.png'
+
 
 const width = 8;
 const candyColors = [
-  'blue',
-  'green',
-  'orange',
-  'purple',
-  'red',
-  'yellow'
+  blueCandy,
+  greenCandy,
+  orangeCandy,
+  purpleCandy,
+  redCandy,
+  yellowCandy
 ]
 
 const App = () => {
