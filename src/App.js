@@ -17,7 +17,7 @@ const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([])
 
   const checkForColumnOfThree = () => {
-    for ( let i = 0; i < 47; i++ ) {
+    for ( let i = 0; i <= 47; i++ ) {
       const columnOfThree =[i, i + width, i + width * 2]
       const decidedColor = currentColorArrangement[i]
 
@@ -44,7 +44,7 @@ const App = () => {
   }
 
   const checkForColumnOfFour = () => {
-    for ( let i = 0; i < 39; i++ ) {
+    for ( let i = 0; i <= 39; i++ ) {
       const columnOfFour =[i, i + width, i + width * 2, i + width * 3]
       const decidedColor = currentColorArrangement[i]
 
@@ -71,7 +71,7 @@ const App = () => {
   }
 
   const moveIntoSquareBelow = () => {
-    for ( let i = 0; i < 64 - width; i++ ) {
+    for ( let i = 0; i <= 55 - width; i++ ) {
       const firstRow = [0, 1, 2, 3, 4, 5, 6, 7]
       const isFirstRow = firstRow.includes(i)
 
@@ -88,7 +88,8 @@ const App = () => {
     }
   }
 
-  const dragStart = () => {
+  const dragStart = (e) => {
+    console.log(e.target)
     console.log('drag start')
   }
 
