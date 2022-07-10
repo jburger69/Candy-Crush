@@ -1,13 +1,26 @@
+html {
+  background: rgb(239,255,0);
+  background: linear-gradient(90deg, rgba(239,255,0,1) 0%, rgba(29,253,237,1) 50%, rgba(207,191,167,1) 100%);
+}
+
 .app {
   display: flex;
   padding: 30px;
+  justify-content: center;
+  margin: 80px;
 }
 
 .game {
   width: 560px;
   height: 560px;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: antiquewhite;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 5px 10px 10px 10px #888888;
 }
 
 .game img {
