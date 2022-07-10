@@ -16,6 +16,7 @@ const App = () => {
 
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
   const [squareBeingDragged, setSquareBeingDragged] = useState(null);
+  const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
 
   const checkForColumnOfThree = () => {
     for ( let i = 0; i <= 47; i++ ) {
@@ -95,8 +96,9 @@ const App = () => {
     setSquareBeingDragged(e.target)
   }
 
-  const dragDrop = () => {
+  const dragDrop = (e) => {
     console.log('drag drop')
+    setSquareBeingReplaced(e.target)
   }
 
   const dragEnd = () => {
