@@ -88,6 +88,18 @@ const App = () => {
     }
   }
 
+  const dragStart = () => {
+    console.log('drag start')
+  }
+
+  const dragDrop = () => {
+    console.log('drag drop')
+  }
+
+  const dragEnd = () => {
+    console.log('drag end')
+  }
+
   const createBoard = () => {
     const randomColorArrangment = []
     for (let i = 0; i < width * width; i++) {
