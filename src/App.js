@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react'
 
+import Header from './components/Header';
 import blueCandy from './images/blue-candy.png';
 import greenCandy from './images/green-candy.png';
 import orangeCandy from './images/orange-candy.png';
@@ -174,22 +175,27 @@ const App = () => {
 
   return (
     <div className='app'>
-      <div className='game'>
-        {currentColorArrangement.map((candyColor, index) => (
-          <img
-            key={index}
-            src={candyColor}
-            alt={candyColor}
-            data-id={index}
-            draggable={true}
-            onDragStart={dragStart}
-            onDragOver={(e) => e.preventDefault()}
-            onDragEnter={(e) => e.preventDefault()}
-            onDragLeave={(e) => e.preventDefault()}
-            onDrop={dragDrop}
-            onDragEnd={dragEnd}
-          />
-        ))}
+      <div className='header'>
+        <Header />
+      </div>
+      <div className="game-container">
+        <div className='game'>
+          {currentColorArrangement.map((candyColor, index) => (
+            <img
+              key={index}
+              src={candyColor}
+              alt={candyColor}
+              data-id={index}
+              draggable={true}
+              onDragStart={dragStart}
+              onDragOver={(e) => e.preventDefault()}
+              onDragEnter={(e) => e.preventDefault()}
+              onDragLeave={(e) => e.preventDefault()}
+              onDrop={dragDrop}
+              onDragEnd={dragEnd}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
