@@ -72,6 +72,15 @@ const App = () => {
 
   const moveIntoSquareBelow = () => {
     for ( let i = 0; i < 64 - width; i++ ) {
+      const firstRow = [0, 1, 2, 3, 4, 5, 6, 7]
+      const isFirstRow = firstRow.includes(i)
+
+      if (isFirstRow && currentColorArrangement[i] === '') {
+        let randomColor = Math.floor(Math.random() * candyColors.length)
+        currentColorArrangement[i] = candyColors[randomColor]
+      }
+
+
       if (( currentColorArrangement[i + width]) === '') {
         currentColorArrangement[i + width] = currentColorArrangement[i]
         currentColorArrangement[i] = ''
@@ -113,6 +122,14 @@ const App = () => {
             key={index}
             style={{backgroundColor: candyColor}}
             alt={candyColor}
+            data-id={index}
+            draggable={true}
+            onDragStart={dragStart}
+            onDragOver={(e) => e.preventDefault()}
+            onDragEnter={(e) => e.preventDefault()}
+            onDragLeave={(e) => e.preventDefault()}
+            onDrop={dragDrop}
+            onDragEnd={dragEnd}
           />
         ))}
       </div>
