@@ -111,6 +111,15 @@ const App = () => {
 
     console.log(squareBeingDraggedId);
     console.log(squareBeingReplacedId);
+
+    const validMoves = [
+      squareBeingDraggedId -1,
+      squareBeingDraggedId - width,
+      squareBeingDraggedId +1,
+      squareBeingDraggedId + width,
+    ]
+
+    const validMove = validMoves.includes(squareBeingReplacedId)
   }
 
   const createBoard = () => {
