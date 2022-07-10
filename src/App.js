@@ -103,6 +103,14 @@ const App = () => {
 
   const dragEnd = () => {
     console.log('drag end')
+    const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute('data-id'))
+    const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
+
+    currentColorArrangement[squareBeingReplacedId] = squareBeingDragged.style.backgroundColor
+    currentColorArrangement[squareBeingDraggedId] = squareBeingReplaced.style.backgroundColor
+
+    console.log(squareBeingDraggedId);
+    console.log(squareBeingReplacedId);
   }
 
   const createBoard = () => {
