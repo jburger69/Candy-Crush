@@ -46,3 +46,15 @@ html {
   width: 70px;
   height: 70px;
 }
+
+.score {
+  margin-left: 50px;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: antiquewhite;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 5px 10px 10px 10px #888888;
+}
