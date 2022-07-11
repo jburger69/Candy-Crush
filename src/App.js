@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react'
 
 import Header from './components/Header';
+import ScoreBoard from './components/ScoreBoard';
 import blueCandy from './images/blue-candy.png';
 import greenCandy from './images/green-candy.png';
 import orangeCandy from './images/orange-candy.png';
@@ -196,6 +197,7 @@ const App = () => {
             />
           ))}
         </div>
+        <ScoreBoard />
       </div>
     </div>
   );
