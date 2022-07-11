@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function ScoreBoard() {
+const ScoreBoard = ({score}) => {
   return (
     <>
         <div className='score'>
-            <h1>ScoreBoard</h1>
-            <h3>HighScore: 60</h3>
+            <h2>{score}</h2>
         </div>
     </>
   )
 }
+
+export default ScoreBoard
