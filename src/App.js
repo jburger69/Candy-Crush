@@ -27,6 +27,7 @@ const App = () => {
   const [currentColorArrangement, setCurrentColorArrangement] = useState([]);
   const [squareBeingDragged, setSquareBeingDragged] = useState(null);
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
+  const [scoreDisplay, setScoreDisplay] = useState(0);
 
   const checkForColumnOfThree = () => {
     for ( let i = 0; i <= 47; i++ ) {
@@ -35,6 +36,7 @@ const App = () => {
 
       //Check to see if square is same color as decided color
       if ( columnOfThree.every(square => currentColorArrangement[square] === decidedColor)) {
+        setScoreDisplay((score) => score + 3)
         columnOfThree.forEach(square => currentColorArrangement[square] = blank)
       }
     }
@@ -50,6 +52,7 @@ const App = () => {
 
       //Check to see if square is same color as decided color
       if ( rowOfThree.every(square => currentColorArrangement[square] === decidedColor)) {
+        setScoreDisplay((score) => score + 3)
         rowOfThree.forEach(square => currentColorArrangement[square] = blank)
       }
     }
@@ -62,6 +65,7 @@ const App = () => {
 
       //Check to see if square is same color as decided color
       if ( columnOfFour.every(square => currentColorArrangement[square] === decidedColor)) {
+        setScoreDisplay((score) => score + 4)
         columnOfFour.forEach(square => currentColorArrangement[square] = blank)
       }
     }
@@ -77,6 +81,7 @@ const App = () => {
 
       //Check to see if square is same color as decided color
       if ( rowOfFour.every(square => currentColorArrangement[square] === decidedColor)) {
+        setScoreDisplay((score) => score + 4)
         rowOfFour.forEach(square => currentColorArrangement[square] = blank)
       }
     }
@@ -197,7 +202,7 @@ const App = () => {
             />
           ))}
         </div>
-        <ScoreBoard />
+        <ScoreBoard score={scoreDisplay}/>
       </div>
     </div>
   );
