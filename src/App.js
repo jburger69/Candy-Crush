@@ -110,26 +110,19 @@ const App = () => {
   }
 
   const dragStart = (e) => {
-    console.log(e.target)
-    console.log('drag start')
     setSquareBeingDragged(e.target)
   }
 
   const dragDrop = (e) => {
-    console.log('drag drop')
     setSquareBeingReplaced(e.target)
   }
 
   const dragEnd = () => {
-    console.log('drag end')
     const squareBeingDraggedId = parseInt(squareBeingDragged.getAttribute('data-id'))
     const squareBeingReplacedId = parseInt(squareBeingReplaced.getAttribute('data-id'))
 
     currentColorArrangement[squareBeingReplacedId] = squareBeingDragged.getAttribute('src')
     currentColorArrangement[squareBeingDraggedId] = squareBeingReplaced.getAttribute('src')
-
-    console.log(squareBeingDraggedId);
-    console.log(squareBeingReplacedId);
 
     const validMoves = [
       squareBeingDraggedId -1,
