@@ -13,6 +13,9 @@ JavaScript
 CSS
 HTML5
 
+Deployed project:
+https://candy-crush-game.herokuapp.com/
+
 React Version:
 18.2.0
 
